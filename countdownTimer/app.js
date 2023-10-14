@@ -27,7 +27,15 @@ const giveaway = document.querySelector(".giveaway");
 const items = document.querySelectorAll(".deadline-format h4");
 // console.log(items);
 
-let futureDate = new Date(2024, 3, 24, 11, 30, 0);
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDay();
+
+// set up future day for 10 days from today
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
+
+// **** this was used in initital set up **** let futureDate = new Date(2024, 3, 24, 11, 30, 0);
 // to get current date use new Date()
 // for specific dates - use new Date with format (year, month, date, hours, minutes, seconds)
 // console.log(futureDate);
